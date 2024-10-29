@@ -1,10 +1,32 @@
 # Exploring other functions from rasterio and rio-xarray packages
 
 **Description**:
+This example demonstrates the use of key functionalities from the **rasterio** and **rio-xarray** packages for geospatial data processing. It includes operations for **reprojection**, **clipping** a raster to a bounding box, and **resampling** the raster to a new resolution.
 
-- **Input**: 
+**Input**: 
+- **Raster dataset** (`ras1`): An input raster opened with `rio-xarray`.  
+- **CRS for reprojection**: `"EPSG:4326"`  
+- **Bounding box coordinates**:  
+  ```text
+  minx = -90.32, miny = 31.33, maxx = -89.90, maxy = 31.15
+  ```  
+- **Scale factor for resampling**: `0.75`  
+- **Input raster file path**: `tif_file`  
+- **Output raster path for resampled data**:  
+  ```
+  VendorUtil_Planet/NewData/resampled_raster.tif
+  ```
 
-- **Expected Output**: 
+**Expected Output**: 
+- **Reprojected Raster**: A raster object (`ras1_lonlat`) reprojected to the `"EPSG:4326"` CRS.  
+- **Clipped Raster**: A subset of the raster clipped using the specified bounding box.  
+- **Resampled Raster**:  
+  - A new raster with dimensions scaled down by 0.75, saved to the specified file.  
+  - Confirmation message:  
+    ```
+    Success: Resample saved
+    ```
+
 
 **Code Snippet**:
 

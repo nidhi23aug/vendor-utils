@@ -10,5 +10,6 @@ This documentation guides users through interacting with the PlanetScope access,
 5. [Search and Filter Data](search_filter.md)
 6. [Surface Reflectance](surfacereflectance.md)
 7. [Normalized Index](normalizedindex.md)
-8. [Data Transformation](transformation.md)
-9. [Download Data](download.md)
+8. [Advance Analysis](advance.md)
+9. [Data Transformation](transformation.md)
+10. [Download Data](download.md)

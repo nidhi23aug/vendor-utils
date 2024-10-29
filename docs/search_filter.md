@@ -6,6 +6,7 @@
 - **Expected Output**: List of available imagery items matching the criteria
 
 **Code Snippet**:
+
 ```python
 from planet import DataClient, filters
 

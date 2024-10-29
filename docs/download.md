@@ -10,6 +10,7 @@
 - **Expected Output**: TIFF files of the selected satellite images
 
 **Code Snippet**:
+
 ```python
 # Select an item from the search results
 item_id = results[0]["id"]

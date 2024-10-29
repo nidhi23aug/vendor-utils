@@ -10,6 +10,7 @@
 - **Expected Output**: Geospatial data transformed to the target CRS or clipped to a specified area
 
 **Code Snippet**:
+
 ```python
 import rasterio
 from rasterio.warp import calculate_default_transform, reproject, Resampling

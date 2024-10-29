@@ -7,6 +7,7 @@
 - **Expected Output**: 
 
 **Code Snippet**:
+
 ```python
 # Band Ratio
 with PlanetScope.open(tif_file) as planet_obj:   

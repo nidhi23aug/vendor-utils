@@ -8,6 +8,7 @@
 
 **Code Snippet**:
 ### Accessing different quality masks
+
 ```python
 with PlanetScope.open(tif_file) as planet_obj:    
     planet_obj.get_quality_mask("clear")

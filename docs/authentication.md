@@ -6,6 +6,7 @@
 - **Expected Output**: Successful login message or an error if authentication fails.
 
 **Code Snippet**:
+
 ```python
 import os
 from planet import Auth

@@ -1,8 +1,8 @@
 # Authentication
 
-**Description**: Before accessing data from the Planet API, authenticate using your API key. This step is essential for verifying permissions to access Planet’s datasets.
+**Description**:
 
-- **Input**: Planet API Key
+- **Input**:
 - **Expected Output**: Successful login message or an error if authentication fails.
 
 **Code Snippet**:

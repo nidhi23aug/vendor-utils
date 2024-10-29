@@ -1,0 +1,46 @@
+# Exploring other functions from rasterio and rio-xarray packages
+
+**Description**:
+
+- **Input**: 
+
+- **Expected Output**: 
+
+**Code Snippet**:
+```python
+# Reprojection 
+ras1_lonlat = ras1.rio.reproject("EPSG:4326")
+print(ras1_lonlat)
+
+#Clip the raster
+from shapely.geometry import box
+
+minx, miny, maxx, maxy = -90.32, 31.33, -89.90, 31.15
+bbox = box(minx, miny, maxx, maxy)
+clipped = ras1_lonlat.rio.clip([bbox], crs="EPSG:4326")
+
+#resample
+from rasterio.enums import Resampling
+
+# Resample
+scale_factor = 0.75
+with rasterio.open(tif_file) as src:
+    data = src.read(
+        out_shape=(
+            src.count,
+            int(src.height * scale_factor),
+            int(src.width * scale_factor)
+        ),
+        resampling=Resampling.bilinear
+    )
+
+    profile = src.profile
+    profile.update(
+        width=data.shape[2],
+        height=data.shape[1]
+    )
+
+    with rasterio.open("VendorUtil_Planet/NewData/resampled_raster.tif", "w", **profile) as dst:
+        dst.write(data)
+
+print("Success Resample saved")
